@@ -161,6 +161,12 @@
 
   })();
 
-  window.Idle = Idle;
+  if (typeof define === 'function' && define.amd) {
+    define([], Idle);
+  } else if (typeof exports === 'object') {
+    module.exports = Idle;
+  } else {
+    window.Idle = Idle;
+  }
 
 }).call(this);
