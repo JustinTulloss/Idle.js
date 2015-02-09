@@ -25,10 +25,6 @@
     }
   }
 
-  "use strict";
-
-  Idle = {};
-
   Idle = (function() {
     Idle.isAway = false;
 

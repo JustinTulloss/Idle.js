@@ -16,8 +16,6 @@ if (!document.removeEventListener)  # W3C DOM
 
 
 #Idle.js main class
-"use strict"
-Idle = { }
 class Idle
   @isAway: false
   #set default timeout to 3 seconds
