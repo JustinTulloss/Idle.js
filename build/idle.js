@@ -161,10 +161,10 @@
 
   })();
 
-  if (typeof define === 'function' && define.amd) {
-    define([], Idle);
-  } else if (typeof exports === 'object') {
+  if (typeof exports === 'object') {
     module.exports = Idle;
+  } else if (typeof define === 'function' && define.amd) {
+    define([], Idle);
   } else {
     window.Idle = Idle;
   }
