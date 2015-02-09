@@ -134,7 +134,7 @@ if typeof exports == 'object'
   module.exports = Idle
 else if typeof define == 'function' && define.amd
   # AMD
-  define([], Idle)
+  define () => Idle
 else
   # Browser global
   window.Idle = Idle

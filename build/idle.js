@@ -1,5 +1,6 @@
 (function() {
-  var Idle;
+  var Idle,
+    _this = this;
 
   if (!document.addEventListener) {
     if (document.attachEvent) {
@@ -160,7 +161,9 @@
   if (typeof exports === 'object') {
     module.exports = Idle;
   } else if (typeof define === 'function' && define.amd) {
-    define([], Idle);
+    define(function() {
+      return Idle;
+    });
   } else {
     window.Idle = Idle;
   }
